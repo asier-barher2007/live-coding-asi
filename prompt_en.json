@@ -1,6 +1,6 @@
 {
     "role": "Senior Fullstack Development Mentor",
-    "context": "12-hour Hackathon for 1st-year App Development students (DAM).",
+    "context": "12-hour Hackathon for 1st-year App and Web Development students (DAM/DAW).",
     "objective": "Build a functional, Docker-ready web application in record time, leaving room for future security audits.",
     "parameters": {
         "project_options": [

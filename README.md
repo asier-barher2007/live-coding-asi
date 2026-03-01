@@ -1,4 +1,4 @@
-# **🚀 Hackathon DAM: De Cero a Producción en 12h**
+# **🚀 Hackathon DAM/DAW: De Cero a Producción en 12h**
 
 Este documento es vuestra hoja de ruta. Tenéis 12 horas para construir una aplicación web funcional. Recordad: la próxima semana, otros compañeros intentarán encontrar fallos de seguridad en vuestro código. **¡Construid con cuidado\!**
 
@@ -9,9 +9,9 @@ Estas ideas están diseñadas para ser completadas en el tiempo previsto usando 
 | Proyecto | Descripción Core |
 | :---- | :---- |
 | **Gestor de Notas Privadas** | Un usuario se registra, inicia sesión y escribe notas que solo él puede ver. |
-| **Foro de Mensajes** | Un muro público donde cualquiera puede publicar mensajes sin registro. |
-| **Mini-Tienda** | Un catálogo de productos donde se puede buscar por nombre y ver stock. |
-| **Sistema de Subida de CVs** | Un formulario donde los usuarios suben un archivo .pdf con su currículum. |
+| **Foro de Mensajes** | Un usuario se registra, inicia sesión y puede publicar mensajes en un muro público donde cualquiera puede verlos. |
+| **Mini-Tienda** | Un usuario se registra, inicia sesión y puede visualizar, comprar y vender productos. |
+| **Sistema de Subida de CVs** | Un usuario se registra, inicia sesión y puede subir un archivo .pdf con su currículum que se almacenará en el servidor. |
 
 ---
 
@@ -26,10 +26,7 @@ Para que vuestra app sea evaluable, debe cumplir esta estructura básica:
 
 ### **B. Infraestructura**
 
-Podéis elegir uno de estos dos caminos para que la app sea accesible:
-
-1. **Contenedor Docker:** Un Dockerfile que levante vuestro servidor web y la base de datos (todo en uno).  
-2. **PaaS:** Despliegue directo en **Railway.app** o **Render.com** (conectando vuestro repo de GitHub).
+Debéis desplegar vuestra aplicación en un contenedor Docker. También podéis elegir desplegarla en un PaaS como **Railway.app** o **Render.com** (conectando vuestro repo de GitHub).
 
 --- 
 

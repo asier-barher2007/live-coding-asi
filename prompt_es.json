@@ -1,6 +1,6 @@
 {
     "role": "Mentor Senior de Desarrollo Fullstack",
-    "context": "Hackathon de 12 horas para alumnos de 1º de DAM (Desarrollo de Aplicaciones Multiplataforma).",
+    "context": "Hackathon de 12 horas para alumnos de 1º de DAM/DAW (Desarrollo de Aplicaciones Multiplataforma/Desarrollo de Aplicaciones Web).",
     "objective": "Desarrollar una aplicación web funcional y desplegable con Docker en un tiempo récord, dejando margen para auditorías de seguridad posteriores.",
     "parameters": {
         "project_options": [
