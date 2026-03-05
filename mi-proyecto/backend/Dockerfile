@@ -1,18 +1,27 @@
-# Usa una imagen ligera de Node
-FROM node:18-alpine
+# backend/Dockerfile
+FROM python:3.12-slim
 
-# Crea el directorio de trabajo
 WORKDIR /app
 
-# Copia los archivos de dependencias y las instala
-COPY package*.json ./
-RUN npm install
+# Instalar gcc (necesario para compilar bcrypt)
+RUN apt-get update && apt-get install -y --no-install-recommends gcc \
+    && rm -rf /var/lib/apt/lists/*
 
-# Copia el resto del código
-COPY . .
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Expone el puerto que usa tu app
+# Copiar solo los archivos Python (NO la carpeta data/)
+COPY app.py .
+COPY seed.py .
+
+# Crear carpeta de datos para SQLite
+RUN mkdir -p /app/data
+
+ENV FLASK_APP=app.py
+ENV FLASK_RUN_HOST=0.0.0.0
+ENV FLASK_RUN_PORT=3000
+ENV PYTHONUNBUFFERED=1
+
 EXPOSE 3000
 
-# Comando para arrancar la app
-CMD ["node", "app.js"]
+CMD ["flask", "run"]
